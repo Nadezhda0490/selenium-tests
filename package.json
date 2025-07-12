@@ -1,0 +1,27 @@
+{
+  "name": "selenium-tests",
+  "version": "1.0.0",
+  "description": "\"# selenium-tests\"",
+  "homepage": "https://github.com/Nadezhda0490/selenium-tests#readme",
+  "bugs": {
+    "url": "https://github.com/Nadezhda0490/selenium-tests/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nadezhda0490/selenium-tests.git"
+  },
+  "license": "ISC",
+  "author": "Nadezhda",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.test.js --timeout 30000"
+  },
+  "devDependencies": {
+    "chai": "^5.2.1",
+    "chromedriver": "^138.0.2",
+    "dotenv": "^17.2.0",
+    "mocha": "^11.7.1",
+    "selenium-webdriver": "^4.34.0"
+  }
+}
