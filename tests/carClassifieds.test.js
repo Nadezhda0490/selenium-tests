@@ -102,13 +102,6 @@ describe("Onliner: Car Classifieds: UI tests", function () {
       5000
     );
 
-    const offers = await driver.findElements(
-      By.css(".vehicle-form__offers-list > a")
-    );
-    if (offers.length === 0) {
-      throw new Error("No offers found!");
-    }
-
     const authPopup = await driver.findElements(By.css(".auth-form"));
     if (authPopup.length > 0) {
       const closeBtn = await driver.findElements(By.css(".auth-form__close"));
@@ -119,6 +112,10 @@ describe("Onliner: Car Classifieds: UI tests", function () {
         await driver.actions().sendKeys(Key.ESCAPE).perform();
       }
     }
+
+    const offers = await driver.findElements(
+      By.css(".vehicle-form__offers-list > a")
+    );
 
     await driver.executeScript("arguments[0].scrollIntoView(true);", offers[0]);
     await offers[0].click();
